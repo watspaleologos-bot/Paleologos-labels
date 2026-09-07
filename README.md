@@ -1,4 +1,4 @@
-# Paleologos Production — Railway PWA v1.10.1
+# Paleologos Production — Railway PWA v1.11.1
 
 Read-only Railway/PWA mirror of the factory production flow.
 
@@ -40,3 +40,7 @@ The remote service has no endpoint that modifies local production state. The loc
 - Future dates show only the day number, with no counts/dots and no history-click action.
 - Mobile calendar cells were reduced substantially so the full month fits much more comfortably on one phone screen.
 
+## v1.11.1
+- Added a first `#` column to Σε παραγωγή, Έτοιμα, Παραδόθηκαν σήμερα and Αποθήκη.
+- Row numbering is visual only and is recalculated from `1..N` after the active tab's current sorting, so it always matches the visible order.
+- The Ιστορικό tab is unchanged and has no row-number column.
