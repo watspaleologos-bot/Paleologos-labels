@@ -1,4 +1,4 @@
-# Paleologos Production — Railway PWA v1.9.4
+# Paleologos Production — Railway PWA v1.9.5
 
 Read-only Railway/PWA mirror of the factory production flow.
 
@@ -19,3 +19,9 @@ The remote service has no endpoint that modifies local production state.
 - Ready and Warehouse show the READY timestamp; Delivered shows the delivery timestamp, matching the desktop flow window.
 - Supports the normalized `last_status_at` field from local v1.9.4 and falls back to existing `ready_at` / `delivered_at` fields for compatibility.
 
+
+## v1.9.5
+- Clickable sortable headers in all production-flow tabs: Σε παραγωγή, Έτοιμα, Παραδόθηκαν σήμερα, Αποθήκη.
+- First click sorts ascending (▲), second click descending (▼).
+- Sort choice is kept separately per tab and survives the dashboard's automatic refreshes.
+- Sorting supports Greek text and numeric-aware values for dimensions, dates, barcodes and timestamps.
