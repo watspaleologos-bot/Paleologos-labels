@@ -2,16 +2,12 @@
   "name": "Paleologos Production",
   "short_name": "Production",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0b1220",
+  "background_color": "#09111f",
   "theme_color": "#0f172a",
   "lang": "el",
   "icons": [
-    {
-      "src": "/static/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    {"src": "/static/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
   ]
 }

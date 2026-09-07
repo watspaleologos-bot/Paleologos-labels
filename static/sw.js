@@ -1,19 +1,8 @@
-const CACHE = 'paleologos-production-v1';
-
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE).then(cache =>
-      cache.addAll([
-        '/',
-        '/static/manifest.json',
-        '/static/icon.svg'
-      ])
-    )
-  );
-});
-
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
-  );
+const CACHE='paleologos-remote-v190';
+self.addEventListener('install',()=>self.skipWaiting());
+self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
+self.addEventListener('fetch',event=>{
+  const u=new URL(event.request.url);
+  if(u.pathname.startsWith('/api/') || u.pathname==='/login' || u.pathname==='/logout') return;
+  event.respondWith(fetch(event.request).catch(()=>caches.match(event.request)));
 });
