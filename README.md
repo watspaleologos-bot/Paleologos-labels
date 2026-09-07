@@ -1,4 +1,4 @@
-# Paleologos Production — Railway PWA v1.10.0
+# Paleologos Production — Railway PWA v1.10.1
 
 Read-only Railway/PWA mirror of the factory production flow.
 
@@ -33,3 +33,10 @@ The remote service has no endpoint that modifies local production state. The loc
 - Detailed rows include actual status timestamp, customer, retail name, type, dimensions, production date and barcode, with sortable headers.
 - History sync is incremental and read-only. Railway keeps a canonical in-memory mirror keyed by barcode and uses a local status-event cursor, so normal traffic sends only changed units.
 - After a Railway restart/redeploy, the local PC automatically rebuilds missing history from the source database. No Railway database is required and local production remains independent of Internet/Railway availability.
+
+## v1.10.1
+- Production History calendar redesigned for compact desktop/mobile use.
+- Day cells now show only a green dot + READY count and a blue dot + DELIVERED count; the long labels were removed from each cell.
+- Future dates show only the day number, with no counts/dots and no history-click action.
+- Mobile calendar cells were reduced substantially so the full month fits much more comfortably on one phone screen.
+
