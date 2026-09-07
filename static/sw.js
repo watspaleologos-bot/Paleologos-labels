@@ -1,4 +1,4 @@
-const CACHE='paleologos-remote-v190';
+const CACHE='paleologos-remote-v191';
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
 self.addEventListener('fetch',event=>{
